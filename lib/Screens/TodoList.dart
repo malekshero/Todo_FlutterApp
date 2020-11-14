@@ -88,37 +88,39 @@ class TodoScreenHelper extends StatelessWidget {
                 backgroundColor: Colors.blueGrey[700],
                 title: new Text(dbs.title),
                 content: Container(
-                height: 200,
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                    TextField(
-                      onChanged: (value) {
-                        dbs.title = value;
-                      },
-                      autofocus: true,
-                      decoration: new InputDecoration(
-                          hintText: dbs.title, fillColor: Colors.blueGrey),
-                    ),
-                    TextField(
-                      onChanged: (value) {
-                        dbs.createdTime = value;
-                      },
-                      autofocus: true,
-                      decoration: new InputDecoration(
-                          hintText: dbs.createdTime, fillColor: Colors.blueGrey),
-                    ),
-                    TextField(
-                      onChanged: (value) {
-                        dbs.description = value;
-                        print(value);
-                      },
-                      autofocus: true,
-                      decoration: new InputDecoration(
-                          hintText: dbs.description, fillColor: Colors.blueGrey),
-                    ),
-                  ]),
+                height: 150,
+                  child: SingleChildScrollView(
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                      TextField(
+                        onChanged: (value) {
+                          dbs.title = value;
+                        },
+                        autofocus: true,
+                        decoration: new InputDecoration(
+                            hintText: dbs.title, fillColor: Colors.blueGrey),
+                      ),
+                      TextField(
+                        onChanged: (value) {
+                          dbs.createdTime = value;
+                        },
+                        autofocus: true,
+                        decoration: new InputDecoration(
+                            hintText: dbs.createdTime, fillColor: Colors.blueGrey),
+                      ),
+                      TextField(
+                        onChanged: (value) {
+                          dbs.description = value;
+                          print(value);
+                        },
+                        autofocus: true,
+                        decoration: new InputDecoration(
+                            hintText: dbs.description, fillColor: Colors.blueGrey),
+                      ),
+                    ]),
+                  ),
                 ),
                 actions: <Widget>[
                   new FlatButton(
