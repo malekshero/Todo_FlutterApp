@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/Screens/AddTodo.dart';
-import 'package:todo_app/Screens/FirstScreen.dart';
-import 'DB/DB_Creator.dart';
-import 'Screens/TodoList.dart';
-import 'Screens/TokenCheck.dart';
-import 'Screens/logIn.dart';
-import 'Screens/signUp.dart';
+import 'package:todo_app/Screens/add_todo.dart';
+import 'package:todo_app/screens/first_screen.dart';
+import 'DB/db_creator.dart';
+import 'Screens/todo_list.dart';
+import 'Screens/token_check.dart';
+import 'Screens/log_in.dart';
+import 'Screens/sign_up.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

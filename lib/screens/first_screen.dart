@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/Component/rounded_button.dart';
-import 'package:todo_app/Screens/signUp.dart';
-import 'logIn.dart';
+import 'package:todo_app/Screens/sign_up.dart';
+import 'package:todo_app/utils/rounded_button.dart';
+import 'log_in.dart';
 
 class FirstScreen extends StatefulWidget {
   static const String id = 'first_screen';

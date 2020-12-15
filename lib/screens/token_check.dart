@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:todo_app/Screens/FirstScreen.dart';
 
-import 'TodoList.dart';
+import 'first_screen.dart';
+import 'todo_list.dart';
 
 class TokenCheckScreen extends StatefulWidget {
   static const String id = 'token_check';

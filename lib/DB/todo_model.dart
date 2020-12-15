@@ -1,7 +1,4 @@
-
-import 'package:flutter/cupertino.dart';
-
-import 'DB_Creator.dart';
+import 'db_creator.dart';
 class TodoModel{
   int id;
   String title;

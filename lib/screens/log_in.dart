@@ -1,12 +1,10 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:todo_app/Component/rounded_button.dart';
-import '../constants.dart';
+import 'package:todo_app/utils/rounded_button.dart';
+import '../utils/constants.dart';
 import 'package:http/http.dart' as http;
-
-import 'AddTodo.dart';
-import 'TodoList.dart';
+import 'todo_list.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String id = 'login_screen';

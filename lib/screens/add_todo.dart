@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:todo_app/Component/rounded_button.dart';
-import 'package:todo_app/Screens/TodoListService.dart';
-import '../constants.dart';
-import 'TodoList.dart';
+import 'package:todo_app/Screens/todo_list_service.dart';
+import 'package:todo_app/utils/rounded_button.dart';
+import '../utils/constants.dart';
+import 'first_screen.dart';
+import 'todo_list.dart';
 
 class AddTodo extends StatelessWidget {
   static const String id = 'addTodo_screen';
@@ -109,7 +110,7 @@ class TodoProvider extends StatelessWidget {
                       colour: Colors.blueGrey[900],
                       onPressed: () {
                         todoService.addTodoToDataBase();
-                    //    Navigator.pop(context);
+                        Navigator.pushReplacementNamed(context, TodoScreen.id);
                       });
                 }),
               ],

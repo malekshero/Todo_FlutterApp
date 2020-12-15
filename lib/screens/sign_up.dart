@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:todo_app/Component/rounded_button.dart';
-import 'package:todo_app/Screens/TodoList.dart';
-import '../constants.dart';
+import 'package:todo_app/Screens/todo_list.dart';
+import 'package:todo_app/utils/rounded_button.dart';
+import '../utils/constants.dart';
 import 'dart:convert';
 
 class SignUpScreen extends StatefulWidget {
@@ -29,7 +29,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
       'password': password,
       'returnSecureToken': true,
     };
-    // sending request and waiting for response
     final http.Response response = await http.post('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDsdMrJ2KAU6OfppPCrHx7KEuk9PWqutSo',
       body: jsonEncode(authData),
       headers: {'Content-Type': 'application/json'},

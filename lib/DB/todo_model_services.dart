@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'DB_Creator.dart';
-import 'TodoModel.dart';
+import 'db_creator.dart';
+import 'todo_model.dart';
 
-class TodoServices {
+class TodoModelServices {
 
   static Future<int> todosCount() async {
     final data = await db

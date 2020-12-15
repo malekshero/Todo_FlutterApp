@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:todo_app/DB/TodoModel.dart';
-import 'package:todo_app/DB/TodoModelHelper.dart';
-import 'package:todo_app/Screens/AddTodo.dart';
-import 'TodoListService.dart';
+import 'package:todo_app/DB/todo_model.dart';
+import 'package:todo_app/DB/todo_model_services.dart';
+import 'package:todo_app/screens/todo_list_service.dart';
+
+import 'add_todo.dart';
+
 
 class TodoScreen extends StatelessWidget {
   static const String id = 'todo_screen';
@@ -44,7 +46,7 @@ class TodoScreenHelper extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Consumer<TodoListService>(builder: (context, todoService, child) {
                   return FutureBuilder<List<TodoModel>>(
-                    future: TodoServices.getAllTodos(),
+                    future: TodoModelServices.getAllTodos(),
                     builder: (context, todos) {
                       if (todos.hasData) {
                         return Column(

@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
-import 'package:todo_app/DB/DB_Creator.dart';
-import 'package:todo_app/DB/TodoModel.dart';
-import 'package:todo_app/DB/TodoModelHelper.dart';
+import 'package:todo_app/DB/db_creator.dart';
+import 'package:todo_app/DB/todo_model.dart';
+import 'package:todo_app/DB/todo_model_services.dart';
 
 class TodoListService with ChangeNotifier {
   int id;
@@ -12,21 +12,21 @@ class TodoListService with ChangeNotifier {
   Future<List<TodoModel>> future;
 
   void addTodoToDataBase() async {
-    int count = await TodoServices.todosCount();
+    int count = await TodoModelServices.todosCount();
     final todo = TodoModel(count, title, description, createdTime, false);
-    await TodoServices.addTodo(todo);
+    await TodoModelServices.addTodo(todo);
     id = todo.id;
     title = todo.title;
     description = todo.description;
     createdTime = todo.createdTime;
-    future = TodoServices.getAllTodos();
+    future = TodoModelServices.getAllTodos();
     notifyListeners();
   }
 
   deleteTodo(TodoModel todo) async {
-    await TodoServices.deleteTodo(todo);
+    await TodoModelServices.deleteTodo(todo);
     id = null;
-    future = TodoServices.getAllTodos();
+    future = TodoModelServices.getAllTodos();
     notifyListeners();
   }
 
